@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sumText1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@android:color/background_dark"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="right"
+            android:hint="請輸入數字"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="@android:color/background_light"
+            android:textSize="45dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="211dp" />
+
+        <LinearLayout
+            android:id="@+id/lAc"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="323dp">
+
+            <Button
+                android:id="@+id/bt_ac"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorGray"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="func_ac"
+                android:text="AC"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/bt_NagativePositive"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/caculatorGray"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="func_NeativePositive"
+                android:text="±"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/bt_8"
+                app:layout_constraintEnd_toStartOf="@+id/bt_persent" />
+
+            <Button
+                android:id="@+id/bt_persent"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorGray"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="persent"
+                android:text="%"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="342dp" />
+
+            <Button
+                android:id="@+id/bt_div"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorOrange"
+                android:onClick="div"
+                android:text="÷"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="150dp"
+                tools:layout_editor_absoluteY="108dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l789"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="422dp">
+
+            <Button
+                android:id="@+id/bt_7"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorGray"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="input"
+                android:text="7"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="44dp"
+                tools:layout_editor_absoluteY="231dp" />
+
+            <Button
+                android:id="@+id/bt_8"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorGray"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="input"
+                android:text="8"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="129dp"
+                tools:layout_editor_absoluteY="231dp" />
+
+            <Button
+                android:id="@+id/bt_9"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorGray"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="input"
+                android:text="9"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="214dp"
+                tools:layout_editor_absoluteY="231dp" />
+
+            <Button
+                android:id="@+id/bt_mul"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorOrange"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="mul"
+                android:text="×"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="299dp"
+                tools:layout_editor_absoluteY="229dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l456"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="517dp">
+
+            <Button
+                android:id="@+id/bt_4"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorGray"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="input"
+                android:text="4"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="44dp"
+                tools:layout_editor_absoluteY="301dp" />
+
+            <Button
+                android:id="@+id/bt_5"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorGray"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="input"
+                android:text="5"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="129dp"
+                tools:layout_editor_absoluteY="301dp" />
+
+            <Button
+                android:id="@+id/bt_6"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorGray"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="input"
+                android:text="6"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="214dp"
+                tools:layout_editor_absoluteY="301dp" />
+
+            <Button
+                android:id="@+id/bt_sub"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorOrange"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="sub"
+                android:text="-"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="299dp"
+                tools:layout_editor_absoluteY="299dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l123"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteY="462dp">
+
+            <Button
+                android:id="@+id/bt_1"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorGray"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="input"
+                android:text="1"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="44dp"
+                tools:layout_editor_absoluteY="371dp" />
+
+            <Button
+                android:id="@+id/bt_2"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorGray"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="input"
+                android:text="2"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="129dp"
+                tools:layout_editor_absoluteY="371dp" />
+
+            <Button
+                android:id="@+id/bt_3"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorGray"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="input"
+                android:text="3"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="214dp"
+                tools:layout_editor_absoluteY="371dp" />
+
+            <Button
+                android:id="@+id/bt_add"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/caculatorOrange"
+                android:fontFamily="sans-serif-smallcaps"
+                android:onClick="add"
+                android:text="+"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="299dp"
+                tools:layout_editor_absoluteY="369dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l0"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteY="532dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_0"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@color/caculatorGray"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:onClick="input"
+                    android:text="0"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="44dp"
+                    tools:layout_editor_absoluteY="441dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_point"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@color/caculatorGray"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:onClick="addPoint"
+                    android:text="."
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="214dp"
+                    tools:layout_editor_absoluteY="441dp" />
+
+                <Button
+                    android:id="@+id/by_eqaul"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@color/caculatorOrange"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:onClick="equal"
+                    android:text="="
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp"
+                    tools:layout_editor_absoluteX="299dp"
+                    tools:layout_editor_absoluteY="441dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
